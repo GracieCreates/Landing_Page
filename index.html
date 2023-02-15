@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+Display:wght@300;400&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <title>Landing Page</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="Assets/Logo_heart.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cake</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </header>
+
+        <!-- Header: Content -->
+        <div class="content">
+            <div class="textbox">
+                <h2>We Love Vintage!<br>Let Them Eat <span>Cake</span></h2>
+                <p>"Qu'ils mangent de la brioche”—“Let them eat cake.” <br>
+                    The most famous quote alledgely from the last Queen of France Marie Antoinette. It's actually translated as "Let them eat brioche". Brioche is a break made with lots of butter and eggs, as luxiours as cakes. </p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Star Product -->
+            <div class="imgBox">
+                <img src="Assets/choco.png" class="cake">
+            </div>
+            <div class="imgBox1">
+                <img src="Assets/Logo_heart.png" class="cake">
+            </div>
+            <!-- thumb -->
+        
+            <ul class="thumb">
+                <li><img src="Assets/choco.png" onclick="imgSlider('Assets/choco.png');changeCircleColor('#FE78A4')"></li>
+                <li><img src="Assets/macaron_pink.png"  onclick="imgSlider('Assets/macaron_pink.png');changeCircleColor('#DBC7DD')"></li>
+                <li><img src="Assets/Strawberry.png" onclick="imgSlider('Assets/Strawberry.png');changeCircleColor('#FBB5BF')"></li>
+                <li><img src="Assets/Millefeille.png" onclick="imgSlider('Assets/Millefeille.png');changeCircleColor('#FE78A4')"></li>
+                <li><img src="Assets/Cookie.png" onclick="imgSlider('Assets/Cookie.png');changeCircleColor('#DBC7DD')"></li>
+            </ul>
+        
+    </section>
+
+<!-- JavaScript-->    
+    <!-- image Slider: Cakes-->
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.cake').src = anything;
+        }
+    
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+
+        }
+
+    </script>
+</body>
+</html>
